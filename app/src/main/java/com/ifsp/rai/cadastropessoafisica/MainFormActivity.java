@@ -9,15 +9,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.List;
+
 public class MainFormActivity extends AppCompatActivity {
 
     Button btInsere, btListar, btVoltar;
     EditText etNome, etIdade, etCPF, etTelefone, etEmail;
 
+    private DBHelper dbh;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_form);
+
+        //Instanciando DBHelper
+        dbh = new DBHelper(this);
 
         //Recuperando campos da tela no Java
         btInsere = (Button) findViewById(R.id.btinserir);
@@ -73,9 +80,9 @@ public class MainFormActivity extends AppCompatActivity {
         if(camposValidos(nome, cpf, idade, telefone, email)) {
             //Se sim, cria instância de Cadastro e insere no banco
             Cadastro cadastro = new Cadastro(nome, cpf, Integer.parseInt(idade), telefone, email);
-            DBHelper dbh = new DBHelper(MainFormActivity.this);
             dbh.insert(nome, cpf, Integer.parseInt(idade), telefone, email);
             exibeAlerta(cadastro.getNome() + " foi inserido com sucesso", cadastro.toString());
+            clear();
         }
         else {
             //Senão, exibe mensagem de erro
@@ -86,6 +93,22 @@ public class MainFormActivity extends AppCompatActivity {
     }
 
     private void listar() {
+        List<Cadastro> cadastros = dbh.recuperaDados();
+        String mensagem = "", titulo = "Cadastros";
+
+        if (cadastros != null) {
+            mensagem += "Foram retornados " + cadastros.size() + " registros:\n\n";
+
+            for(Cadastro cadastro: cadastros) {
+                mensagem += cadastro.toString() + "\n\n";
+            }
+
+        }
+        else {
+            mensagem += "A consulta não retornou resultado!";
+        }
+
+        exibeAlerta(titulo, mensagem);
     }
 
     private void voltar() {
@@ -93,6 +116,14 @@ public class MainFormActivity extends AppCompatActivity {
         intent.setClass(MainFormActivity.this, TelaInicialActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    private void clear() {
+        etNome.setText("");
+        etCPF.setText("");
+        etIdade.setText("");
+        etEmail.setText("");
+        etTelefone.setText("");
     }
 
     private void exibeAlerta(String titulo, String mensagem) {
