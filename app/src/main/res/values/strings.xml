@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">Cadastro Pessoa Fisica</string>
+    <string name="app_name">Projeto Final</string>
+    <string name="app_title">Sistema Cadastral de Pessoa Física</string>
+    <string name="app_credit">Desenvolvido por Raí Gomes, Versão 1.0</string>
+    <string name="label_insertPerson">Inserir Pessoa Física</string>
+    <string name="label_insertData">Inserir Dados</string>
+    <string name="label_listData">Listar Registros</string>
+    <string name="label_back">Voltar</string>
+    <string name="form_personName">Nome</string>
+    <string name="form_personID">CPF</string>
+    <string name="form_personAge">Idade</string>
+    <string name="form_personWebmail">Email</string>
+    <string name="form_personPhoneNumber">Telefone</string>
 </resources>

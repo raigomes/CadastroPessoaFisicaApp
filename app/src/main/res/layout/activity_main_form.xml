@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFormActivity">
+
+    <TextView
+        android:id="@+id/tvnome"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="328dp"
+        android:layout_marginTop="10dp"
+        android:gravity="start"
+        android:text="@string/form_personName"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#737373"
+        android:textSize="15sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@+id/btinserir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etnome"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:ems="10"
+        android:hint="@+id/tvnome"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvnome" />
+
+    <TextView
+        android:id="@+id/tvcpf"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginBottom="40sp"
+        android:gravity="start"
+        android:text="@string/form_personID"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#737373"
+        android:textSize="15sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@+id/tvidade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvnome" />
+
+    <EditText
+        android:id="@+id/etcpf"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:ems="10"
+        android:hint="@+id/tvcpf"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvcpf" />
+
+    <TextView
+        android:id="@+id/tvidade"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginBottom="40sp"
+        android:gravity="start"
+        android:text="@string/form_personAge"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#737373"
+        android:textSize="15sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@+id/tvtelefone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvcpf" />
+
+    <EditText
+        android:id="@+id/etidade"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:ems="10"
+        android:hint="@+id/tvidade"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvidade" />
+
+    <TextView
+        android:id="@+id/tvtelefone"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginBottom="40sp"
+        android:gravity="start"
+        android:text="@string/form_personPhoneNumber"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#737373"
+        android:textSize="15sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@+id/tvemail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvidade" />
+
+    <EditText
+        android:id="@+id/ettelefone"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:ems="10"
+        android:hint="@+id/tvtelefone"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtelefone" />
+
+    <TextView
+        android:id="@+id/tvemail"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginBottom="0sp"
+        android:gravity="start"
+        android:text="@string/form_personWebmail"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#737373"
+        android:textSize="15sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@+id/etemail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtelefone" />
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginBottom="40sp"
+        android:ems="10"
+        android:hint="@+id/tvemail"
+        android:inputType="textWebEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/btinserir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvemail" />
+
+    <Button
+        android:id="@+id/btinserir"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginStart="22dp"
+        android:text="@string/label_insertData"
+        app:layout_constraintBottom_toTopOf="@+id/btlistar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvnome" />
+
+    <Button
+        android:id="@+id/btlistar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginStart="22dp"
+        android:text="@string/label_listData"
+        app:layout_constraintBottom_toTopOf="@+id/btvoltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btinserir" />
+
+    <Button
+        android:id="@+id/btvoltar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginStart="22dp"
+        android:text="@string/label_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btlistar" />
+
+
+</android.support.constraint.ConstraintLayout>
