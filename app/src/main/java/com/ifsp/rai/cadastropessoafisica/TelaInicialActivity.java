@@ -6,6 +6,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+//******************************************************
+
+//Instituto Federal de São Paulo - Campus Sertãozinho
+
+//Disciplina......: M4DADM
+
+//Programação de Computadores e Dispositivos Móveis
+
+//Aluno...........: Rai Gomes Mesquita
+
+//******************************************************
+
+
+// DESCRIÇÃO.......: Activity relacionada a tela inicial
+
+
 public class TelaInicialActivity extends AppCompatActivity {
 
     Button btInsert;
@@ -15,8 +31,9 @@ public class TelaInicialActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_inicial);
 
+        //Recupera botão de inserir
         btInsert = (Button) findViewById(R.id.btinsere);
-
+        //Trata o evento de clique do botão
         btInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -24,7 +41,7 @@ public class TelaInicialActivity extends AppCompatActivity {
             }
         });
     }
-
+    //Exibe a tela do formulário de cadastro
     private void chamaSegundaTela() {
         Intent intent = new Intent();
         intent.setClass(TelaInicialActivity.this, MainFormActivity.class);

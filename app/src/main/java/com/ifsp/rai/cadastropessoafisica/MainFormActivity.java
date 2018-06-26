@@ -11,6 +11,22 @@ import android.widget.EditText;
 
 import java.util.List;
 
+//******************************************************
+
+//Instituto Federal de São Paulo - Campus Sertãozinho
+
+//Disciplina......: M4DADM
+
+//Programação de Computadores e Dispositivos Móveis
+
+//Aluno...........: Rai Gomes Mesquita
+
+//******************************************************
+
+
+// DESCRIÇÃO.......: Activity relacionada a tela do formulário
+
+
 public class MainFormActivity extends AppCompatActivity {
 
     Button btInsere, btListar, btVoltar;
@@ -70,6 +86,7 @@ public class MainFormActivity extends AppCompatActivity {
     }
 
     private void inserir() {
+        //Recupera valores dos campos do formulário
         String nome = etNome.getText().toString();
         String cpf = etCPF.getText().toString();
         String idade = etIdade.getText().toString();
@@ -93,9 +110,11 @@ public class MainFormActivity extends AppCompatActivity {
     }
 
     private void listar() {
+        //Cria lista com a consulta dos cadastros no bd
         List<Cadastro> cadastros = dbh.recuperaDados();
         String mensagem = "", titulo = "Cadastros";
 
+        //Caso retorne algum registro, varre a lista e atribui os cadastros na mensagem de alerta
         if (cadastros != null) {
             mensagem += "Foram retornados " + cadastros.size() + " registros:\n\n";
 
@@ -104,10 +123,11 @@ public class MainFormActivity extends AppCompatActivity {
             }
 
         }
+        //Caso contrário, atribui a mensagem que a consulta não retornou resultado
         else {
             mensagem += "A consulta não retornou resultado!";
         }
-
+        //Exibe o alerta
         exibeAlerta(titulo, mensagem);
     }
 

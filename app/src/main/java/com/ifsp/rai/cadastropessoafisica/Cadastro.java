@@ -1,5 +1,20 @@
 package com.ifsp.rai.cadastropessoafisica;
 
+//******************************************************
+
+//Instituto Federal de São Paulo - Campus Sertãozinho
+
+//Disciplina......: M4DADM
+
+//Programação de Computadores e Dispositivos Móveis
+
+//Aluno...........: Rai Gomes Mesquita
+
+//******************************************************
+
+
+// DESCRIÇÃO.......: POJO - Classe que declara os campos da tabela "cadastro"
+
 class Cadastro {
     private String nome;
     private String cpf;
@@ -15,6 +30,7 @@ class Cadastro {
         this.email = email;
     }
 
+    /* Getters e Setters */
     public String getNome() {
         return nome;
     }
@@ -55,6 +71,7 @@ class Cadastro {
         this.email = email;
     }
 
+    /* Método toString() */
     @Override
     public String toString() {
         return "Nome: " + this.nome

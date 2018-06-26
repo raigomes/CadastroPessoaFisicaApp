@@ -9,6 +9,21 @@ import android.database.sqlite.SQLiteStatement;
 import java.util.ArrayList;
 import java.util.List;
 
+//******************************************************
+
+//Instituto Federal de São Paulo - Campus Sertãozinho
+
+//Disciplina......: M4DADM
+
+//Programação de Computadores e Dispositivos Móveis
+
+//Aluno...........: Rai Gomes Mesquita
+
+//******************************************************
+
+
+// DESCRIÇÃO.......: Classe que manipula o banco de dados
+
 
 public class DBHelper {
 
